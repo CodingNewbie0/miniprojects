@@ -9,8 +9,8 @@
 ![네이버뉴스앱1](https://raw.githubusercontent.com/CodingNewbie0/miniprojects/main/images/naver_news1.png)
 ![네이버뉴스앱2](https://raw.githubusercontent.com/CodingNewbie0/miniprojects/main/images/naver_news2.png)
 -->
-<img src="https://raw.githubusercontent.com/CodingNewbie0/miniprojects/main/images/naver_news1.png" width = 500>
-<img src="https://raw.githubusercontent.com/CodingNewbie0/miniprojects/main/images/naver_news2.png" width = 500>
+<img src="https://raw.githubusercontent.com/CodingNewbie0/miniprojects/main/images/naver_news1.png" width = 800>
+<img src="https://raw.githubusercontent.com/CodingNewbie0/miniprojects/main/images/naver_news2.png" width = 800>
 
 ## DB연동 GUI 개발 학습
 
