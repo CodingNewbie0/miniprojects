@@ -9,20 +9,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>640</width>
-    <height>400</height>
+    <width>820</width>
+    <height>640</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>640</width>
-    <height>400</height>
+    <width>820</width>
+    <height>640</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>640</width>
-    <height>400</height>
+    <width>820</width>
+    <height>640</height>
    </size>
   </property>
   <property name="font">
@@ -38,13 +38,19 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>620</width>
+     <width>822</width>
      <height>81</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="searchLatout">
     <item>
      <widget class="QGroupBox" name="groupBox">
+      <property name="minimumSize">
+       <size>
+        <width>820</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="font">
        <font>
         <family>나눔고딕</family>
@@ -58,7 +64,7 @@
         <rect>
          <x>30</x>
          <y>24</y>
-         <width>551</width>
+         <width>751</width>
          <height>31</height>
         </rect>
        </property>
@@ -107,13 +113,25 @@
     <rect>
      <x>10</x>
      <y>90</y>
-     <width>621</width>
-     <height>301</height>
+     <width>802</width>
+     <height>502</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QTableWidget" name="tblResult">
+      <property name="minimumSize">
+       <size>
+        <width>800</width>
+        <height>500</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>800</width>
+        <height>500</height>
+       </size>
+      </property>
       <property name="font">
        <font>
         <family>나눔고딕</family>
