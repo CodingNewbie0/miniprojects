@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>19</y>
+      <width>621</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>정보입력</string>
+       </property>
+       <widget class="QPushButton" name="btnNew">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>130</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>신규</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnLoad">
+        <property name="geometry">
+         <rect>
+          <x>530</x>
+          <y>130</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>저장</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>31</x>
+          <y>60</y>
+          <width>261</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="font">
+            <font>
+             <family>나눔고딕</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>전 화 번 호 : </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="txtPhoen">
+           <property name="font">
+            <font>
+             <family>나눔고딕</family>
+            </font>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>31</x>
+          <y>31</y>
+          <width>261</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <family>나눔고딕</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>이          름 : </string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="txtName">
+           <property name="font">
+            <font>
+             <family>나눔고딕</family>
+            </font>
+           </property>
+           <property name="inputMethodHints">
+            <set>Qt::ImhLatinOnly|Qt::ImhTime</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>90</y>
+          <width>261</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="font">
+            <font>
+             <family>나눔고딕</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>이   메   일  : </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="txtEmail">
+           <property name="font">
+            <font>
+             <family>나눔고딕</family>
+            </font>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>120</y>
+          <width>261</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="font">
+            <font>
+             <family>나눔고딕</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>주           소 : </string>
+           </property>
+           <property name="wordWrap">
+            <bool>false</bool>
+           </property>
+           <property name="openExternalLinks">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="txtAddress">
+           <property name="font">
+            <font>
+             <family>나눔고딕</family>
+            </font>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>209</y>
+      <width>621</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QTableWidget" name="tblAddress"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
