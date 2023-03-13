@@ -26,4 +26,19 @@
 
 ## DB연동 GUI 개발 학습
 
+## 파이썬 관련 추가학습
+- QR코드 생성 앱
+    - QRCODE 모듈
+    - PyQt
+
+![QR코드앱](https://raw.githubusercontent.com/CodingNewbie0/miniprojects/main/images/qrcodeapp.png)
+
+- 컴퓨터 정보 출력 앱
+    - psutil 모듈
+    - socket 모듈
+    - requests 모듈
+    - PyQt
+
+![컴퓨터 정보 출력 앱](https://raw.githubusercontent.com/CodingNewbie0/miniprojects/main/images/comInfo.png)
+
 ## 미니프로젝트 실습

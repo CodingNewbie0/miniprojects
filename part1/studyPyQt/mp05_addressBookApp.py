@@ -2,7 +2,7 @@
 import sys
 from PyQt5 import uic
 from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
+from PyQt5.QtGui import * # QIcon은 여기있음
 import pymysql
 
 class qtApp(QMainWindow):
