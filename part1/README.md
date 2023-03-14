@@ -41,4 +41,13 @@
 
 ![컴퓨터 정보 출력 앱](https://raw.githubusercontent.com/CodingNewbie0/miniprojects/main/images/comInfo.png)
 
+- TTS(Text To Speech)
+    - gTTS 모듈
+    - playsound 모듈
+
+- 암호해제 프로그램 
+    - itertools, Zipfile 기본모듈
+
+- 
+
 ## 미니프로젝트 실습
