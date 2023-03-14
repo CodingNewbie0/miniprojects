@@ -45,6 +45,8 @@
     - gTTS 모듈
     - playsound 모듈
 
+![TTS 모듈 실행화면](https://raw.githubusercontent.com/CodingNewbie0/miniprojects/main/images/pyqttts.png)
+
 - 암호해제 프로그램 
     - itertools, Zipfile 기본모듈
 
