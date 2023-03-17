@@ -60,7 +60,10 @@
     - 이메일 전송
     - 스팸(대량)메일 전송
 
-- PyGame
+- PyGame - DinoRun
+    - PyGame
+
+<img src="https://raw.githubusercontent.com/CodingNewbie0/miniprojects/main/images/pygame1.png" width = 800 />
 
 ## 미니프로젝트 실습
 - 버스정차 시스템
