@@ -69,6 +69,15 @@
 
 게임화면
 
+- 전국대학교 위치맵
+    - Pandas
+    - Folium
+    - PyQt
+        - QWebEngineView
+<img src="https://raw.githubusercontent.com/CodingNewbie0/miniprojects/main/images/university_folium.png" width = 800 />
+
+실행화면
+
 ## 미니프로젝트 실습
 - 버스정차 시스템
     - [팀리포지토리](https://github.com/PKNU-IOT3/bustop_pyqt_practice)
