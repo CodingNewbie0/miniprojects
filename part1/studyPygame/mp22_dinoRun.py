@@ -181,7 +181,7 @@ class Reset:
 
 
 def main():
-    global game_speed, x_pos_bg, y_pos_bg, points, obstacles
+    global game_speed, x_pos_bg, y_pos_bg, points, obstacles, font
     x_pos_bg = 0
     y_pos_bg = 380
     points = 0 # 게임점수
@@ -239,9 +239,9 @@ def main():
             # Collision Detection(충돌 감지)
             if dino.dino_rect.colliderect(obs.rect):
                 # pygame.draw.rect(SCREEN, (255,0,0), dino.dino_rect, 3)
-                pygame.time.delay(2000)
-                death_count += 1
-                menu(death_count)
+                pygame.time.delay(1500) # 1.5초
+                death_count += 1 # 죽음
+                menu(death_count) # 메인 메뉴화면으로 전환
                 
         background()
 
@@ -256,22 +256,22 @@ def main():
         clock.tick(40) # 30기본 60이면 빨라짐
         pygame.display.update()
 
-def menu(death_count):
+def menu(death_count): # 메뉴함수
     global points
     run = True
     while run:
         font = pygame.font.Font(f'{ASSETS}NanumGothicBold.ttf', size=20)
         SCREEN.fill((255,255,255))
 
-        if death_count == 0:
-            text = font.render('시작하시려면 아무키나 눌러주세요.', True, (0,0,0))
+        if death_count == 0: # 최초
+            text = font.render('시작하시려면 아무키나 눌러주세요.', True, (83,83,83))
             textRect = text.get_rect()
             textRect.center = (SCREEN_WIDTH // 2 , SCREEN_HEIGHT//2)
             SCREEN.blit(text, textRect) # 스크린에 텍스트 띄움
             SCREEN.blit(RUNNING[0], (SCREEN_WIDTH//2 - 20, SCREEN_HEIGHT//2 - 140)) # 스크린에 시작그림 띄움
-        elif death_count > 0:
-            text = font.render('다시 시작하시려면 아무키나 눌러주세요.', True, (0,0,0))
-            score = font.render(f'Your Score : {points} 점', True, (0,0,0))
+        elif death_count > 0: # 죽음
+            text = font.render('다시 시작하시려면 아무키나 눌러주세요.', True, (83,83,83))
+            score = font.render(f'Your Score : {points} 점', True, (83,83,83))
             scoreRect = score.get_rect()
             scoreRect.center = (SCREEN_WIDTH // 2 , SCREEN_HEIGHT//2 + 50)
             SCREEN.blit(score, scoreRect)
@@ -284,10 +284,10 @@ def menu(death_count):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
+                pygame.QUIT() # 완전 종료
             if event.type == pygame.KEYDOWN:
                 main()
 
-menu(death_count=0)
 
 if __name__ == '__main__':
-    main()
+    menu(death_count=0)

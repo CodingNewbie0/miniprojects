@@ -65,6 +65,10 @@
 
 <img src="https://raw.githubusercontent.com/CodingNewbie0/miniprojects/main/images/pygame1.png" width = 800 />
 
+<img src="https://raw.githubusercontent.com/CodingNewbie0/miniprojects/main/images/pygame1.png" width = 800 />
+
+게임화면
+
 ## 미니프로젝트 실습
 - 버스정차 시스템
     - [팀리포지토리](https://github.com/PKNU-IOT3/bustop_pyqt_practice)
