@@ -80,6 +80,7 @@
 
 - 계산기앱
     - PyQt
+    - 16개 signal을 1개 slot함수로 처리
 <img src="https://raw.githubusercontent.com/CodingNewbie0/miniprojects/main/images/calculator.png" width = "250" />
 
 실행화면
