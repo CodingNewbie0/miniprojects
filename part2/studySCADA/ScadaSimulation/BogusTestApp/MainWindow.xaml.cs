@@ -1,4 +1,4 @@
-﻿using BogusTestApp.Models;
+﻿using FakeIotDeviceApp.Models;
 using MahApps.Metro.Controls;
 using Newtonsoft.Json;
 using System;
@@ -16,7 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BogusTestApp
+namespace FakeIotDeviceApp
 {
     /// <summary>
     /// MainWindow.xaml에 대한 상호 작용 논리
@@ -36,7 +36,7 @@ namespace BogusTestApp
         private void BtnGenDummyData_Click(object sender, RoutedEventArgs e)
         {
             var repo = new SampleCustomerRepository();
-            var customers = repo.GetCustomers(5);
+            var customers = repo.GetCustomers(2);
             var result = JsonConvert.SerializeObject(customers, Formatting.Indented);
             RtbResult.Text = result;
         }

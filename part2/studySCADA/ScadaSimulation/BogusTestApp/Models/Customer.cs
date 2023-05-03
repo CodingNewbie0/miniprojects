@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BogusTestApp.Models
+namespace FakeIotDeviceApp.Models
 {
     public class Customer // 고객 테이블 매핑
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BogusTestApp.Models
+namespace FakeIotDeviceApp.Models
 {
     public class Order // 주문 테이블
     {

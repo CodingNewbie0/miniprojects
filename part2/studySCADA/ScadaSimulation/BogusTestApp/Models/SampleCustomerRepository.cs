@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BogusTestApp.Models
+namespace FakeIotDeviceApp.Models
 {
     public class SampleCustomerRepository
     {

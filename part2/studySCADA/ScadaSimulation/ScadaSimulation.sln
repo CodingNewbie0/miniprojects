@@ -7,7 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BogusTestApp", "BogusTestAp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test용", "Test용", "{2B97AADB-C706-48ED-ABFF-F75563A225A8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "시뮬레이션용", "시뮬레이션용", "{40CDF351-EB10-4CDD-8636-14DBC900DC3E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MQTT Subscriber", "MQTT Subscriber", "{40CDF351-EB10-4CDD-8636-14DBC900DC3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MQTT Publisher", "MQTT Publisher", "{760BAAFF-F4AC-4457-96BF-FB97B7061352}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeIotDeviceApp", "FakeIotDeviceApp\FakeIotDeviceApp.csproj", "{C06D9D90-D642-4F60-BD23-992CCE40E81C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +23,17 @@ Global
 		{9D1FBB58-50BB-4D3D-A4AA-295BAAB19B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D1FBB58-50BB-4D3D-A4AA-295BAAB19B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D1FBB58-50BB-4D3D-A4AA-295BAAB19B7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C06D9D90-D642-4F60-BD23-992CCE40E81C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C06D9D90-D642-4F60-BD23-992CCE40E81C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C06D9D90-D642-4F60-BD23-992CCE40E81C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C06D9D90-D642-4F60-BD23-992CCE40E81C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9D1FBB58-50BB-4D3D-A4AA-295BAAB19B7D} = {2B97AADB-C706-48ED-ABFF-F75563A225A8}
+		{C06D9D90-D642-4F60-BD23-992CCE40E81C} = {760BAAFF-F4AC-4457-96BF-FB97B7061352}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E28D84DB-9B7E-4E04-8BCA-FAEED3B1DEE4}
