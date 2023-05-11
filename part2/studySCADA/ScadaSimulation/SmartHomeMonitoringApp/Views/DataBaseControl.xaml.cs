@@ -4,11 +4,23 @@ using Newtonsoft.Json;
 using SmartHomeMonitoringApp.Logics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 using uPLibrary.Networking.M2Mqtt.Messages;
+using uPLibrary.Networking.M2Mqtt;
 
 namespace SmartHomeMonitoringApp.Views
 {
@@ -18,8 +30,11 @@ namespace SmartHomeMonitoringApp.Views
     public partial class DataBaseControl : UserControl
     {
         public bool IsConnected { get; set; }
-        Thread MqttThread { get; set; } // 없으면 UI컨트롤이 어려워짐
+        Thread MqttThread { get; set; }  // 없으면 UI컨트롤이 어려워짐
 
+        // MQTT Subscrivition text 과도문제 속도저하를 잡기위해 변수
+        // 23.05.11 09:29 PHC
+        int MaxCount { get; set; } = 50;
         public DataBaseControl()
         {
             InitializeComponent();
@@ -35,15 +50,29 @@ namespace SmartHomeMonitoringApp.Views
 
             IsConnected = false;     // 아직 접속이 안되었음
             BtnConnDb.IsChecked = false;
+
+            // 실시간 모니터링에서 넘어왔을 때
+            if (Commons.MQTT_CLIENT != null && Commons.MQTT_CLIENT.IsConnected)
+            {
+                IsConnected = true;
+                BtnConnDb.Content = "MQTT 연결중";
+                BtnConnDb.IsChecked = true;
+                Commons.MQTT_CLIENT.MqttMsgPublishReceived += MQTT_CLIENT_MqttMsgPublishReceived;
+            }
         }
 
         // 토글버튼 클릭이벤트 핸들러
         private void BtnConnDb_Click(object sender, RoutedEventArgs e)
         {
+            ConnectDB();
+        }
+
+        private void ConnectDB()
+        {
             if (IsConnected == false)
-            {               
+            {
                 // Mqtt 브로커 생성
-                Commons.MQTT_CLIENT = new uPLibrary.Networking.M2Mqtt.MqttClient(Commons.BROKERHOST);
+                Commons.MQTT_CLIENT = new MqttClient(Commons.BROKERHOST);
 
                 try
                 {
@@ -58,6 +87,7 @@ namespace SmartHomeMonitoringApp.Views
                         UpdateLog(">>> MQTT Broker Connected");
 
                         BtnConnDb.IsChecked = true;
+                        BtnConnDb.Content = "MQTT 연결중";
                         IsConnected = true; // 예외발생하면 true로 변경할 필요 없음
                     }
                 }
@@ -74,10 +104,10 @@ namespace SmartHomeMonitoringApp.Views
                     {
                         Commons.MQTT_CLIENT.MqttMsgPublishReceived -= MQTT_CLIENT_MqttMsgPublishReceived;
                         Commons.MQTT_CLIENT.Disconnect();
-                        UpdateLog(">>> MQTT Broker Disconnect");
+                        UpdateLog(">>> MQTT Broker Disconnected...");
 
                         BtnConnDb.IsChecked = false;
-                        
+                        BtnConnDb.Content = "MQTT 연결종료";
                         IsConnected = false;
                     }
                 }
@@ -92,8 +122,16 @@ namespace SmartHomeMonitoringApp.Views
         {
             // 예외처리 필요!!
             this.Invoke(() => {
+                if (MaxCount <= 0)
+                {
+                    TxtLog.Text = string.Empty;
+                    TxtLog.Text += ">>> 문서건수가 많아져 초기화!/n";
+                    TxtLog.ScrollToEnd();
+                    MaxCount = 0; // 테스트할땐 10, 운영시는 50
+                }
                 TxtLog.Text += $"{msg}\n";
                 TxtLog.ScrollToEnd();
+                MaxCount--;
             });
         }
 
@@ -127,7 +165,7 @@ namespace SmartHomeMonitoringApp.Views
                                              Sensing_DateTime,
                                              Temp,
                                              Humid)
-                                             VALUES
+                                            VALUES
                                             (@Home_Id,
                                              @Room_Name,
                                              @Sensing_DateTime,
@@ -140,7 +178,7 @@ namespace SmartHomeMonitoringApp.Views
                         cmd.Parameters.AddWithValue("@Sensing_DateTime", currValue["Sensing_DateTime"]);
                         cmd.Parameters.AddWithValue("@Temp", currValue["Temp"]);
                         cmd.Parameters.AddWithValue("@Humid", currValue["Humid"]);
-                        // ... 파라미터 다섯개 
+
                         if (cmd.ExecuteNonQuery() == 1)
                         {
                             UpdateLog(">>> DB Insert succeed.");
