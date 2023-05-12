@@ -20,15 +20,15 @@
 온습도 더미데이터 시뮬레이터
 
 <img 
-src="https://raw.githubusercontent.com/CodingNewbie0/miniprojects\part2\studySCADA\ScadaSimulation\SmartHomePublisher.gif" width=700>
+src="https://raw.githubusercontent.com\CodingNewbie0\miniprojects\main\part2\studySCADA\ScadaSimulation\SmartHomePublisher.gif" width=700>
 
 스마트홈 모니터링 앱
 
 <img 
-src="https://raw.githubusercontent.com/CodingNewbie0/miniprojects\part2\studySCADA\ScadaSimulation\SmartHomeMonitor1.gif" width=700>
+src="https://raw.githubusercontent.com\CodingNewbie0\miniprojects\main\part2\studySCADA\ScadaSimulation\SmartHomeMonitor1.gif" width=700>
 
 스마트홈 모니터링 시각화
 
 <img 
-src="https://raw.githubusercontent.com/CodingNewbie0/miniprojects\part2\studySCADA\ScadaSimulation\SmartHomeMonitor2.gif" width=700>
+src="https://raw.githubusercontent.com\CodingNewbie0\miniprojects\main\part2\studySCADA\ScadaSimulation\SmartHomeMonitor2.gif" width=700>
 
